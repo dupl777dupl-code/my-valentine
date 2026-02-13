@@ -1,0 +1,86 @@
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    overflow: hidden; 
+}
+.bg-image {
+    background-image: url('https://i.postimg.cc/FzgxmpRK/164510c411df492d9f38a75a93dbdfab-(1).jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px); 
+    max-width: 400px;
+    width: 90%;
+}
+
+.hidden { display: none; }
+
+.heart-container {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots-heart {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-20 -20 552 552'%3E%3Cpath d='M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z' fill='none' stroke='%23ff4b2b' stroke-width='12' stroke-dasharray='1, 25' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-size: 92%;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: pulseHeart 1.2s infinite ease-in-out;
+}
+
+.main-photo {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10%; 
+}
+
+
+@keyframes pulseHeart {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.08); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Стили для кнопок и инпута (чтобы было красиво) */
+input, button {
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+button {
+    background: #ff4b2b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff416c;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Сюрприз</title>
+</head>
+    <body style="background-image: url('https://i.postimg.cc/FzgxmpRK/164510c411df492d9f38a75a93dbdfab-(1).jpg'); background-size: cover; background-position: center; background-attachment: fixed;"></body>
+    <div class="container">
+        <button id="showBtn" onclick="reveal()">готов?</button>
+        
+        <div id="content" class="hidden">
+            <div class="heart-container">
+                <div class="dots-heart"></div>
+                <img src="https://i.postimg.cc/k5MwC5B7/ohfrgoiahrs.jpg" alt="Фото" class="main-photo">
+            </div>
+            <h2>Люблю тебя, ня!</h2>
+        </div>
+    </div>
+
+    <script>
+        function reveal() {
+            document.getElementById('showBtn').classList.add('hidden');
+            document.getElementById('content').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
